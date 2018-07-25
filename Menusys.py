@@ -1,16 +1,19 @@
 from tkinter import *
-def menu ():
-    root  = Tk()
+#import tkinter as Tk
+#def menu ():
+
+    root = Tk()
     root.geometry("1200x2200")
-    mb = Menubutton(root, text = "This is a menu")
-    mb.menu = Menu(mb)
-    mb["menu"] = mb.menu
-    mb.menu.add_command(label = "Play", command = lambda:[print("this is play")])
-    mb.menu.add_command(label = "Exit", command = lambda: [print("this is Exit")])
-    mb.pack()
+    import tkinter as Tk
+    v=Tk.IntVar()
+    command=lambda:print(v.get)
+    radioButton1 =Radiobutton (root, variable = v, value = 0,text = "This is a menu")
+    radioButton2 =Radiobutton (root, variable = v, value = 1,text = "This is a menu")
+    radioButton1.pack()
+    radioButton2.pack
     root.mainloop()
 
-menu()
+#menu()
 
 
 # from tkinter import *
