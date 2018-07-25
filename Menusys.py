@@ -1,7 +1,7 @@
 from tkinter import *
 def menu ():
     root  = Tk()
-    root.geometry("200x200")
+    root.geometry("1200x2200")
     mb = Menubutton(root, text = "This is a menu")
     mb.menu = Menu(mb)
     mb["menu"] = mb.menu
@@ -9,23 +9,17 @@ def menu ():
     mb.menu.add_command(label = "Exit", command = lambda: [print("this is Exit")])
     mb.pack()
     root.mainloop()
-        # print ("Welcome,,\n 1. print Hello \n 2. print world \n 3. print python \n  4. print Hello world,welcome to my program")
-        # choices = input()
-        #
-        # if choices == "1":
-        #     print("PLAY")
-        #     menu()
-        #
-        # if choices == "2"
-        #     print ("Exit")
-        #     menu()
-        #
-        # if choices == "3"
-        #     print ()
-        #     menu()
-        #
-        # if choices == "4"
-        #     print ("")
-        #     menu()
 
 menu()
+
+
+# from tkinter import *
+#
+# root = Tk()
+#
+# import Tkinter as tk       #Import Tkinter
+# root = tk.Tk()               #Bind Tkinter to the root object
+# root.geometry("800x600")             #Set the window dimensions
+# root.bind('<KeyPress>', onKeyPress)       #For example, bind the onKeyPress method (you must create it), and have some code
+#                                                                        #done when key is pressed
+# root.mainloop()         #Starts the Tkinter and onKeyPress event
