@@ -1,13 +1,18 @@
-
 from tkinter import *
 
-class App:
-  def __init__(self, root):
-    fm = Frame(root, width=2000, height=900, bg="gray")
-    fm.pack(side=TOP, expand=NO, fill=NONE)
 
+def main():
+    # This is where we define the menu and give option to play
+    root  = Tk()
+    root.geometry("200x200")
+    mb = Menubutton(root, text = "This is a menu")
+    mb.menu = Menu(mb)
+    mb["menu"] = mb.menu
+    mb.menu.add_command(label = "Play", command = lambda:[print("this is play")])
+    mb.menu.add_command(label = "Exit", command = lambda: [print("this is Exit")])
+    mb.pack()
+    # end menu code
+    root.mainloop()
 
-
-root = Tk()
-display = App(root)
-root.mainloop()
+if __name__ == "__main__":
+    main()
