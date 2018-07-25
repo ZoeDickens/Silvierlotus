@@ -21,12 +21,12 @@ class Window(Frame):
         playButton = Button(self, text="Play")
 
         # placing the button on my window
-        playButton.place(x=, y=0)
+        playButton.place(x=50%, y=50%)
 
 root = Tk()
 
 #size of the window
-root.geometry("x300")
+root.geometry("400x300")
 
 app = Window(root)
 root.mainloop()
