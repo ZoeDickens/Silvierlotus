@@ -1,7 +1,5 @@
-from tkinter import *
-#import tkinter as Tk
-#def menu ():
 
+from tkinter import *
 
 class Window(Frame):
 
@@ -24,7 +22,20 @@ class Window(Frame):
         playButton = Button(self, text="Play")
 
         # placing the button on my window
-        playButton.place(x=82, y=92)
+        playButton.place(x=700, y=450)
+
+
+        # changing the title of our master widget
+        self.master.title("GUI")
+
+        # allowing the widget to take the full space of the root window
+        self.pack(fill=BOTH, expand=1)
+
+        # creating a button instance
+        ExitButton = Button(self, text="Exit")
+
+        # placing the button on my window
+        ExitButton.place(x=700, y=500)
 
 root = Tk()
 
