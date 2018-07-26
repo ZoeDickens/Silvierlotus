@@ -19,7 +19,7 @@ class SampleApp(tk.Tk):
         container.grid_columnconfigure(0, weight=1)
 
         self.frames = {}
-        for F in (StartPage, PageOne, PageTwo):
+        for F in (StartPage, Prolog, exit):
             page_name = F.__name__
             frame = F(parent=container, controller=self)
             self.frames[page_name] = frame
@@ -45,15 +45,15 @@ class StartPage(tk.Frame):
         label = tk.Label(self, text="This is the start page", font=controller.title_font)
         label.pack(side="top", fill="x", pady=10)
 
-        button1 = tk.Button(self, text="Go to Page One",
-                            command=lambda: controller.show_frame("PageOne"))
-        button2 = tk.Button(self, text="Go to Page Two",
-                            command=lambda: controller.show_frame("PageTwo"))
+        button1 = tk.Button(self, text="Play",
+                            command=lambda: controller.show_frame("Prolog"))
+        button2 = tk.Button(self, text="exit",
+                            command=lambda: controller.show_frame("exit"))
         button1.pack()
         button2.pack()
 
 
-class PageOne(tk.Frame):
+class Prolog(tk.Frame):
 
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
@@ -65,16 +65,12 @@ class PageOne(tk.Frame):
         button.pack()
 
 
-class PageTwo(tk.Frame):
+class exit(tk.Frame):
 
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         self.controller = controller
-        label = tk.Label(self, text="This is page 2", font=controller.title_font)
-        label.pack(side="top", fill="x", pady=10)
-        button = tk.Button(self, text="Go to the start page",
-                           command=lambda: controller.show_frame("StartPage"))
-        button.pack()
+        command=quit
 
 
 if __name__ == "__main__":

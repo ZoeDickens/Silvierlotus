@@ -12,4 +12,6 @@ class StartPage(tk.Frame):
                             command=lambda: controller.show_frame("PageTwo"))
         button1.pack()
         button2.pack()
-#this is the page code 
+
+         command=lambda: controller.show_frame("the page you need here"))
+#this is the page code
