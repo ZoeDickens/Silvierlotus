@@ -1,8 +1,9 @@
 import tkinter as tk                # python 3
 from tkinter import font  as tkfont # python 3
 import time
-#import Tkinter as tk     # python 2
+#import Tkinter as tk     # python
 #import tkFont as tkfont  # python 2
+
 
 class SampleApp(tk.Tk):
 
@@ -51,7 +52,14 @@ class StartPage(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         self.controller = controller
-        label = tk.Label(self, text="This is the start page", font=controller.title_font)
+
+        background_image=tk.PhotoImage(file = "test2.gif")
+        background_label = tk.Label(self, image=background_image)
+        background_label.image = background_image
+        background_label.place(x=0, y=0, relwidth=1, relheight=1)
+
+
+        label = tk.Label(self, text="Order of the Silver Lotus", font=controller.title_font)
         label.pack(side="top", fill="x", pady=10)
 
         button1 = tk.Button(self, text="Play",
@@ -60,6 +68,7 @@ class StartPage(tk.Frame):
                             command=lambda: controller.show_frame("exit"))
         button1.pack()
         button2.pack()
+
 
     def show(self):
         #self.controller = controller
@@ -94,6 +103,8 @@ class prologuetext(tk.Frame):
         label.pack(side="top", fill="x", pady=15)
         label = tk.Label(self, text="Verenia’s Workshop", font=controller.title_font)
         label.pack(side="top", fill="x", pady=20)
+
+
 
 
 
