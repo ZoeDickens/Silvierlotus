@@ -26,6 +26,8 @@ class SampleApp(tk.Tk):
             frame = F(parent=container, controller=self)
             self.frames[page_name] = frame
 
+            
+
             # put all of the pages in the same location;
             # the one on the top of the stacking order
             # will be the one that is visible.
@@ -37,6 +39,7 @@ class SampleApp(tk.Tk):
         '''Show a frame for the given page name'''
         frame = self.frames[page_name]
         frame.tkraise()
+        frame.geometry("500x500")
         # if (page_name == "prologuetext"):
         #     frame = self.frames[page_name]
         #     frame.tkraise()
@@ -56,7 +59,7 @@ class StartPage(tk.Frame):
         background_label = tk.Label(self, image=background_image)
         background_label.image = background_image
         background_label.place(x=0, y=0, relwidth=1, relheight=1)
-        label = tk.Label(self, text="Welocome to the order of the Silver Lotus ", font=controller.title_font)
+        label = tk.Label(self, text="Welcome to the order of the Silver Lotus ", font=controller.title_font)
         label.pack(side="top", fill="x", pady=10)
         label = tk.Label(self, text="Order of the Silver Lotus", font=controller.title_font)
 
@@ -73,9 +76,9 @@ class StartPage(tk.Frame):
         button3.pack()
 
 
-        button1.config( height = 1, width = 10 )
-        button2.config( height = 1, width = 9 )
-        button3.config( height = 1, width = 8 )
+        button1.config( height = 1, width = 15, pady = 30)
+        button2.config( height = 1, width = 9, pady = 30)
+        button3.config( height = 1, width = 8, pady = 30)
 
 
     def show(self):
@@ -151,6 +154,9 @@ class exit(tk.Frame):
         tk.Frame.__init__(self, parent)
         self.controller = controller
         command=quit
+
+
+
 
 
 if __name__ == "__main__":
