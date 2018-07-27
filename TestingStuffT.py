@@ -10,6 +10,7 @@ class SampleApp(tk.Tk):
 
         self.title_font = tkfont.Font(family='CINZEL DEOCRATIVE', size=18, weight="bold", slant="italic")
 
+        self.geometry('2000x2000')
         # the container is where we'll stack a bunch of frames
         # on top of each other, then the one we want visible
         # will be raised above the others
@@ -46,7 +47,7 @@ class StartPage(tk.Frame):
         label.pack(side="top", fill="x", pady=10)
 
 
-        mw.geometry("500x500")
+
 
 
 

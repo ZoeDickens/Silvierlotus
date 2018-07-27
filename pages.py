@@ -5,13 +5,14 @@ import time
 #import tkFont as tkfont  # python 2
 
 
-
 class SampleApp(tk.Tk):
 
     def __init__(self, *args, **kwargs):
         tk.Tk.__init__(self, *args, **kwargs)
 
         self.title_font = tkfont.Font(family='Helvetica', size=18, weight="bold", slant="italic")
+
+        self.geometry('2000x2000')
 
         # the container is where we'll stack a bunch of frames
         # on top of each other, then the one we want visible
@@ -27,14 +28,14 @@ class SampleApp(tk.Tk):
             frame = F(parent=container, controller=self)
             self.frames[page_name] = frame
 
-            
+
 
             # put all of the pages in the same location;
             # the one on the top of the stacking order
             # will be the one that is visible.
             frame.grid(row=0, column=0, sticky="nsew")
 
-        self.show_frame("StartPage")
+            self.show_frame("StartPage")
 
     def show_frame(self, page_name):
         '''Show a frame for the given page name'''
@@ -95,20 +96,11 @@ class Prolog(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         self.controller = controller
-        text.mark_set("sentinel", INSERT)
-        # "Midday’s light could be seen slipping through the humongous, glass windows on the left, yet Verenia couldn’t care less about the beauty of Sillatine. "
-        label = tk.Label(self, text="Her hands were busy, thin tools in her hands moving through the wires of the disconnected HomeBot’s skull.", font=controller.title_font)
-        label = tk.Label(self, text="She only stopped moving her hands and tilted her head back from her focus when the iron door opened, a tall man carrying a tray approaching her with a busy expression. ", font=controller.title_font)
-        label = tk.Label(self, text="“Here are the upgrades you asked for, Doctor Charade,” he explained as he set the tray down on the already cluttered table beside her. The three tools on the tray rattled as they settled, the noise causing Verenia’s brows to furrow in annoyance.", font=controller.title_font)
-        label = tk.Label(self, text="“Thanks, Percy,” Verenia replied, placing the tools down to look closer at the objects settled on the tray. She didn’t watch her assistant as he left the room, his hands held tight behind his back in a strict manner.", font=controller.title_font)
-        label = tk.Label(self, text="She turned to the iron tray, her right hand reaching to pick up the first upgrade. It was a thin USB drive that looked very similar to the other two upgrades sitting upon the tray, yet it was colored in a red hue. The second upgrade was more yellow, while the third one was pink.", font=controller.title_font)
-        label = tk.Label(self, text="All of these will affect how the HomeBot makes its choices. Red for resilience, yellow for compassion, and pink for humor.", font=controller.title_font)
-        label = tk.Label(self, text="Which upgrade will Verenia add that will affect how the HomeBot thinks?", font=controller.title_font)
-
+        label = tk.Label(self, text="This is page 1", font=controller.title_font)
         label.pack(side="top", fill="x", pady=10)
-        button = tk.Button(self, text="Red (Resilience)",command=lambda: controller.show_frame("U1"))
-        button2 = tk.Button(self, text="Yellow (Compassion)",command=lambda: controller.show_frame("U2"))
-        button3 = tk.Button(self, text="Pink (Humor)",command=lambda: controller.show_frame("U3"))
+        button = tk.Button(self, text="first upgrade",command=lambda: controller.show_frame("U1"))
+        button2 = tk.Button(self, text="second upgrade",command=lambda: controller.show_frame("U2"))
+        button3 = tk.Button(self, text="third upgrade",command=lambda: controller.show_frame("U3"))
         button.pack()
         button2.pack()
         button3.pack()
