@@ -1,5 +1,6 @@
 import tkinter as tk                # python 3
 from tkinter import font  as tkfont # python 3
+import time
 #import Tkinter as tk     # python 2
 #import tkFont as tkfont  # python 2
 
@@ -35,6 +36,14 @@ class SampleApp(tk.Tk):
         '''Show a frame for the given page name'''
         frame = self.frames[page_name]
         frame.tkraise()
+        # if (page_name == "prologuetext"):
+        #     frame = self.frames[page_name]
+        #     frame.tkraise()
+        #     time.sleep(10)
+        #     self.show_frame("Prolog")
+        # else:
+        #     frame = self.frames[page_name]
+        #     frame.tkraise()
 
 
 class StartPage(tk.Frame):
@@ -46,11 +55,18 @@ class StartPage(tk.Frame):
         label.pack(side="top", fill="x", pady=10)
 
         button1 = tk.Button(self, text="Play",
-                            command=lambda: controller.show_frame("Prolog"))
+                            command=lambda: self.show())
         button2 = tk.Button(self, text="exit",
                             command=lambda: controller.show_frame("exit"))
         button1.pack()
         button2.pack()
+
+    def show(self):
+        #self.controller = controller
+        self.controller.show_frame("prologuetext")
+        self.controller.after(5000, self.controller.show_frame, "Prolog")
+
+
 
 
 class Prolog(tk.Frame):
@@ -72,10 +88,14 @@ class prologuetext(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         self.controller = controller
-        label = tk.Label(self, text="prologuetext", font=controller.title_font)
+        label = tk.Label(self, text="Prologue Begins", font=controller.title_font)
         label.pack(side="top", fill="x", pady=10)
-        def start_reset(self):
-            self.after(5000,self.controller.show_frame(Prolog))
+        label = tk.Label(self, text="Sillatine, 2E 314", font=controller.title_font)
+        label.pack(side="top", fill="x", pady=15)
+        label = tk.Label(self, text="Verenia’s Workshop", font=controller.title_font)
+        label.pack(side="top", fill="x", pady=20)
+
+
 
 
 class U1(tk.Frame):
