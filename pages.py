@@ -51,15 +51,23 @@ class StartPage(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         self.controller = controller
-        label = tk.Label(self, text="Welocome to the order of the Silvier Lotus ", font=controller.title_font)
+        label = tk.Label(self, text="Welocome to the order of the Silver Lotus ", font=controller.title_font)
         label.pack(side="top", fill="x", pady=10)
 
         button1 = tk.Button(self, text="Play",
                             command=lambda: self.show())
-        button2 = tk.Button(self, text="exit",
-                            command=lambda: controller.show_frame("exit"))
+        button2 = tk.Button(self, text="Exit",
+                            command=lambda: controller.show_frame("Exit"))
+        button3 = tk.Button(self, text="Settings",
+                            command=lambda: controller.show_frame("Settings"))
         button1.pack()
         button2.pack()
+        button3.pack()
+
+
+        button1.config( height = 1, width = 10 )
+        button2.config( height = 1, width = 9 )
+        button3.config( height = 1, width = 8 )
 
     def show(self):
         #self.controller = controller

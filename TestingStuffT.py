@@ -1,48 +1,14 @@
-import sys
-from tkinter import *
 import tkinter as tk                # python 3
 from tkinter import font  as tkfont # python 3
 import tkinter as Tk     # python 2
 #import tkFont as tkfont  # python 2
-
-
 
 class SampleApp(tk.Tk):
 
     def __init__(self, *args, **kwargs):
         tk.Tk.__init__(self, *args, **kwargs)
 
-        self.title_font = tkfont.Font(family='Helvetica', size=18, weight="bold", slant="italic")
-
-
-
-#main menu
-def mmWindow():
-    mmWindow=Tk()
-    mmWindow.geometry('600x600')
-
-
-#first window
-mWindow= Tk()
-mWindow.geometry('1920x1080+0+0')
-mWindow.title('DMX512 Controller')
-
-wtitle = Label (mWindow, text = "Pi DMX", fg = 'blue')
-wtitle.place(x = 640, y = 100)
-
-#main menu button
-mmbutton = Button (mWindow, text = "Main Menu",command = mmWindow)
-mmbutton.place( x=200, y = 200)
-mmbutton.config(width=200, height=200)
-
-
-# You can set any height and width you want
-mmbutton = tk.Button(mWindow, height=5, width=20, text="Main Menu", command=mmWindow)
-mmbutton.grid(row=1, column=1)
-
-
-
-
+        self.title_font = tkfont.Font(family='CINZEL DEOCRATIVE', size=18, weight="bold", slant="italic")
 
         # the container is where we'll stack a bunch of frames
         # on top of each other, then the one we want visible
@@ -76,8 +42,11 @@ class StartPage(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         self.controller = controller
-        label = tk.Label(self, text="Welocome to the order of the Silvier Lotus ", font=controller.title_font)
+        label = tk.Label(self, text="Welocome to the order of the Silver Lotus ", font=controller.title_font)
         label.pack(side="top", fill="x", pady=10)
+
+
+
 
 
 
@@ -93,6 +62,9 @@ class StartPage(tk.Frame):
         button2.pack()
         button3.pack()
 
+        button1.config( height = 1, width = 10 )
+        button2.config( height = 1, width = 9 )
+        button3.config( height = 1, width = 8 )
 
 class PageOne(tk.Frame):
 
@@ -122,9 +94,7 @@ class PageTwo(tk.Frame):
 
 
 #size of the window
-def main():
-    frame = Tk()
-    frame.geometry("480x360")
+
 
 
 
