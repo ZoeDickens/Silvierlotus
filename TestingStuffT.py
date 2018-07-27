@@ -46,6 +46,9 @@ class StartPage(tk.Frame):
         label.pack(side="top", fill="x", pady=10)
 
 
+        mw.geometry("500x500")
+
+
 
 
 
