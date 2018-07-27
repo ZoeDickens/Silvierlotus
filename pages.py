@@ -42,7 +42,7 @@ class StartPage(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         self.controller = controller
-        label = tk.Label(self, text="This is the start page", font=controller.title_font)
+        label = tk.Label(self, text="Welocome to the order of the Silvier Lotus ", font=controller.title_font)
         label.pack(side="top", fill="x", pady=10)
 
         button1 = tk.Button(self, text="Play",
