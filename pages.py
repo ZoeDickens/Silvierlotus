@@ -19,7 +19,7 @@ class SampleApp(tk.Tk):
         container.grid_columnconfigure(0, weight=1)
 
         self.frames = {}
-        for F in (StartPage, Prolog, exit):
+        for F in (StartPage, Prolog, exit, U1, U2, U3, prologuetext):
             page_name = F.__name__
             frame = F(parent=container, controller=self)
             self.frames[page_name] = frame
@@ -60,9 +60,50 @@ class Prolog(tk.Frame):
         self.controller = controller
         label = tk.Label(self, text="This is page 1", font=controller.title_font)
         label.pack(side="top", fill="x", pady=10)
-        button = tk.Button(self, text="Go to the start page",
-                           command=lambda: controller.show_frame("StartPage"))
+        button = tk.Button(self, text="first upgrade",command=lambda: controller.show_frame("U1"))
+        button2 = tk.Button(self, text="second upgrade",command=lambda: controller.show_frame("U2"))
+        button3 = tk.Button(self, text="third upgrade",command=lambda: controller.show_frame("U3"))
         button.pack()
+        button2.pack()
+        button3.pack()
+
+class prologuetext(tk.Frame):
+
+    def __init__(self, parent, controller):
+        tk.Frame.__init__(self, parent)
+        self.controller = controller
+        label = tk.Label(self, text="prologuetext", font=controller.title_font)
+        label.pack(side="top", fill="x", pady=10)
+        def start_reset(self):
+            self.after(5000,self.controller.show_frame(Prolog))
+
+
+class U1(tk.Frame):
+
+    def __init__(self, parent, controller):
+        tk.Frame.__init__(self, parent)
+        self.controller = controller
+        label = tk.Label(self, text="This is the upgrade page 1", font=controller.title_font)
+        label.pack(side="top", fill="x", pady=10)
+
+
+class U2(tk.Frame):
+
+    def __init__(self, parent, controller):
+        tk.Frame.__init__(self, parent)
+        self.controller = controller
+        label = tk.Label(self, text="This is upgrade 2", font=controller.title_font)
+        label.pack(side="top", fill="x", pady=20)
+
+
+class U3(tk.Frame):
+
+    def __init__(self, parent, controller):
+        tk.Frame.__init__(self, parent)
+        self.controller = controller
+        label = tk.Label(self, text="This is upgrade 3", font=controller.title_font)
+        label.pack(side="top", fill="x", pady=30)
+
 
 
 class exit(tk.Frame):
