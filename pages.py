@@ -10,7 +10,7 @@ class SampleApp(tk.Tk):
     def __init__(self, *args, **kwargs):
         tk.Tk.__init__(self, *args, **kwargs)
 
-        self.title_font = tkfont.Font(family='Helvetica', size=18, weight="bold", slant="italic")
+        self.title_font = tkfont.Font(family='Helvetica', size=45, weight="bold", slant="italic")
 
 
 
@@ -63,7 +63,7 @@ class StartPage(tk.Frame):
         background_label.place(x=0, y=0, relwidth=1, relheight=1)
         label = tk.Label(self, text="Order of the Silver Lotus", font=controller.title_font)
 
-        label.pack(side="top", fill="x", pady = 10)
+        label.pack(side="top", fill="x", pady = 15)
 
         button1 = tk.Button(self, text="Play",
                             command=lambda: self.show())
@@ -80,7 +80,7 @@ class StartPage(tk.Frame):
         button1.config( height = 1, width = 13, pady = 15, padx = 25)
         button2.config( height = 1, width = 13, pady = 15, padx = 25)
         button3.config( height = 1, width = 13, pady = 15, padx = 25)
-        button1.config(bg= "#e8e8e8")
+        button1.config(bg= "#d4d6d5")
 
 
     def show(self):
