@@ -28,7 +28,7 @@ class SampleApp(tk.Tk):
         container.grid_columnconfigure(0, weight=1)
 
         self.frames = {}
-        for F in (StartPage, Prolog, exit, U1, U2, U3, prologuetext, HOP, HOP2, HOP3, HOP4, bar, fight):
+        for F in (StartPage, Prolog, exit, U1, U2, U3, prologuetext, HOP, HOP2, HOP3, HOP4, bar, fight, end):
             page_name = F.__name__
             frame = F(parent=container, controller=self)
             self.frames[page_name] = frame
@@ -340,11 +340,11 @@ class fight(tk.Frame):
         self.Ahealth_label = tk.Label(self, text="health: 200", font=controller.title_font)
         self.Ahealth_label.pack(side="top", fill="x", pady=10)
 
-        button1 = tk.Button(self, text="shoot with gun", command=lambda: self.gun(False))
+        button1 = tk.Button(self, text="shoot with gun", command=lambda: self.randomgen(1))
         button1.pack()
-        button2 = tk.Button(self, text="punch", command=lambda: self.punch(False))
+        button2 = tk.Button(self, text="punch", command=lambda: self.randomgen(2))
         button2.pack()
-        button3 = tk.Button(self, text="heal", command=lambda: self.heal(False))
+        button3 = tk.Button(self, text="heal", command=lambda: self.randomgen(3))
         button3.pack()
 
     def gun(self, stuff):
@@ -363,25 +363,41 @@ class fight(tk.Frame):
         else:
             self.health -=5
             self.health_label.config(text = "health: " + str(self.health))
+
     def heal(self, stuff):
         if stuff == True:
             self.Ahealth +=10
             self.Ahealth_label.config(text = "health: " + str(self.Ahealth))
+        else:
+            self.health +=10
+            self.health_label.config(text = "health: " + str(self.health))
+
 
     def randomgen(self, action):
-        if action == 1:
-            self.gun(False)
-        if action == 2:
-            self.punch(False)
-        if action == 3:
-            self.heal(False)
-        num = randint(1, 3)
-        if num == 1 :
-            self.gun(True)
-        elif num == 2:
-            self.punch(True)
-        elif num == 3:
-            self.heal(True)
+        if self.health <= 0:
+            self.controller.show_frame("end")
+        else:
+            if action == 1:
+                self.gun(False)
+            elif action == 2:
+                self.punch(False)
+            elif action == 3:
+                self.heal(False)
+            num = randint(1, 3)
+            if num == 1 :
+                self.gun(True)
+            elif num == 2:
+                self.punch(True)
+            elif num == 3:
+                self.heal(True)
+
+class end(tk.Frame):
+
+    def __init__(self, parent, controller):
+        tk.Frame.__init__(self, parent)
+        self.controller = controller
+        label = tk.Label(self, text="this is the end", font=controller.title_font)
+        label.pack(side="top", fill="x", pady=10)
 
 
 
