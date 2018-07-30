@@ -12,7 +12,7 @@ class SampleApp(tk.Tk):
 
         self.title_font = tkfont.Font(family='Helvetica', size=18, weight="bold", slant="italic")
 
-        self.geometry('2000x2000')
+
 
         # the container is where we'll stack a bunch of frames
         # on top of each other, then the one we want visible
@@ -41,7 +41,7 @@ class SampleApp(tk.Tk):
         '''Show a frame for the given page name'''
         frame = self.frames[page_name]
         frame.tkraise()
-        frame.geometry("500x500")
+        self.geometry("2000x2000")
         # if (page_name == "prologuetext"):
         #     frame = self.frames[page_name]
         #     frame.tkraise()
@@ -73,9 +73,9 @@ class StartPage(tk.Frame):
                             command=lambda: controller.show_frame("Exit"))
         button3 = tk.Button(self, text="Settings",
                             command=lambda: controller.show_frame("Settings"))
-        button1.pack()
-        button2.pack()
-        button3.pack()
+        button1.place(x=650, y=550)
+        button2.place(x=650, y=630)
+        button3.place(x= 650, y= 720)
 
 
         button1.config( height = 1, width = 15, pady = 30)
