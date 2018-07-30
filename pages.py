@@ -292,6 +292,7 @@ class HOP4(tk.Frame):
         label.pack(side="top", fill="x", pady=10)
         button = tk.Button(self, text="continue",command=lambda:controller.show_frame("bar"))
         button.pack()
+        button.place(x=650, y=550)
 
 class exit(tk.Frame):
 
@@ -314,6 +315,7 @@ class bar(tk.Frame):
                             command=lambda: controller.show_frame("fight"))
 
         button1.pack()
+        button1.place(x=650, y=550)
 
 class fight(tk.Frame):
 
