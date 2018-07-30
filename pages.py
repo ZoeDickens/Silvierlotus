@@ -61,8 +61,6 @@ class StartPage(tk.Frame):
         background_label = tk.Label(self, image=background_image)
         background_label.image = background_image
         background_label.place(x=0, y=0, relwidth=1, relheight=1)
-        label = tk.Label(self, text="Welcome to the order of the Silver Lotus ", font=controller.title_font)
-        label.pack(side="top", fill="x", pady=10)
         label = tk.Label(self, text="Order of the Silver Lotus", font=controller.title_font)
 
         label.pack(side="top", fill="x", pady=10)
@@ -75,7 +73,7 @@ class StartPage(tk.Frame):
                             command=lambda: controller.show_frame("Settings"))
         button1.place(x=650, y=550)
         button2.place(x=650, y=630)
-        button3.place(x= 650, y= 720)
+        button3.place(x=650, y=720)
 
 
         button1.config( height = 1, width = 15, pady = 30)
