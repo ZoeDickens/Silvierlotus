@@ -1,6 +1,8 @@
 import tkinter as tk                # python 3
 from tkinter import font as tkfont # python 3
 import time
+from random import randint
+
 #import Tkinter as tk     # python
 #import tkFont as tkfont  # python 2
 # root = tk()
@@ -13,7 +15,7 @@ class SampleApp(tk.Tk):
     def __init__(self, *args, **kwargs):
         tk.Tk.__init__(self, *args, **kwargs)
 
-        self.title_font = tkfont.Font(family='Helvetica', size=41, weight="bold", slant="italic")
+        self.title_font = tkfont.Font(family='Helvetica', size=30, weight="bold", slant="italic")
 
 
 
@@ -317,11 +319,68 @@ class bar(tk.Frame):
 
 class fight(tk.Frame):
 
+    Ahealth = 200
+    health = 100
+    health_label = None
+    Ahealth_lable = None
+
+
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         self.controller = controller
-        label = tk.Label(self, text="bfight scene", font=controller.title_font)
+        label = tk.Label(self, text="fight scene", font=controller.title_font)
         label.pack(side="top", fill="x", pady=10)
+        label = tk.Label(self, text="", font=controller.title_font)
+        label.pack(side="top", fill="x", pady=10)
+        self.health_label = tk.Label(self, text="health: 100", font=controller.title_font)
+        self.health_label.pack(side="top", fill="x", pady=10)
+
+        self.Ahealth_label = tk.Label(self, text="health: 200", font=controller.title_font)
+        self.Ahealth_label.pack(side="top", fill="x", pady=10)
+
+        button1 = tk.Button(self, text="shoot with gun", command=lambda: self.gun(False))
+        button1.pack()
+        button2 = tk.Button(self, text="punch", command=lambda: self.punch(False))
+        button2.pack()
+        button3 = tk.Button(self, text="heal", command=lambda: self.heal(False))
+        button3.pack()
+
+    def gun(self, stuff):
+        if stuff == True:
+            self.Ahealth -=10
+            self.Ahealth_label.config(text = "health: " + str(self.Ahealth))
+        else:
+            self.health -=10
+            self.health_label.config(text = "health: " + str(self.health))
+
+
+    def punch(self, stuff):
+        if stuff == True:
+            self.Ahealth -=5
+            self.Ahealth_label.config(text = "health: " + str(self.Ahealth))
+        else:
+            self.health -=5
+            self.health_label.config(text = "health: " + str(self.health))
+    def heal(self, stuff):
+        if stuff == True:
+            self.Ahealth +=10
+            self.Ahealth_label.config(text = "health: " + str(self.Ahealth))
+
+    def randomgen(self, action):
+        if action == 1:
+            self.gun(False)
+        if action == 2:
+            self.punch(False)
+        if action == 3:
+            self.heal(False)
+        num = randint(1, 3)
+        if num == 1 :
+            self.gun(True)
+        elif num == 2:
+            self.punch(True)
+        elif num == 3:
+            self.heal(True)
+
 
 
 
