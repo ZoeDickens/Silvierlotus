@@ -290,6 +290,8 @@ class HOP4(tk.Frame):
         self.controller = controller
         label = tk.Label(self, text="......of course..I...I'll do it", font=controller.title_font)
         label.pack(side="top", fill="x", pady=10)
+        lable = tk.Label(self, text="...", font=controller.title_font)
+        lable = tk.Label(self, text="Prologue Ends", font=controller.title_font)
         button = tk.Button(self, text="continue",command=lambda:controller.show_frame("bar"))
         button.pack()
         button.place(x=650, y=550)
