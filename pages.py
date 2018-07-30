@@ -106,25 +106,33 @@ class Prolog(tk.Frame):
         # T.insert(END, "Just a text Widget\nin two lines\n")
         # mainloop()
         label = tk.Label(self, text="Midday’s light could be seen slipping through the humongous, glass windows on the left, yet Verenia couldn’t care less about the beauty of Sillatine.", font=controller.title_font)
+        label.config(font=("Helvetica", 21))
         label.pack(side="top", fill="x", pady=10)
         label = tk.Label(self, text="Her hands were busy, thin tools in her hands moving through the wires of the disconnected HomeBot’s skull.", font=controller.title_font)
+        label.config(font=("Helvetica", 21))
         label.pack(side="top", fill="x", pady=10)
         label = tk.Label(self, text="She only stopped moving her hands and tilted her head back from her focus when the iron door opened, \n"
         "a tall man carrying a tray approaching her with a busy expression.", font=controller.title_font)
+        label.config(font=("Helvetica", 21))
         label.pack(side="top", fill="x", pady=10)
         label = tk.Label(self, text=" 'Here are the upgrades you asked for, Doctor Charade,' he explained as he set the tray down on the already cluttered table beside her.\n"
         "The three tools on the tray rattled as they settled, the noise causing Verenia’s brows to furrow in annoyance.", font=controller.title_font)
+        label.config(font=("Helvetica", 21))
         label.pack(side="top", fill="x", pady=10)
         label = tk.Label(self, text="'Thanks, Percy,' Verenia replied, placing the tools down to look closer at the objects settled on the tray. She didn’t watch her assistant as he left the room,\n"
         "his hands held tight behind his back in a strict manner.", font=controller.title_font)
+        label.config(font=("Helvetica", 21))
         label.pack(side="top", fill="x", pady=10)
         label = tk.Label(self, text="She turned to the iron tray, her right hand reaching to pick up the first upgrade. \n"
         "It was a thin USB drive that looked very similar to the other two upgrades sitting upon the tray, yet it was colored in a red hue.\n"
         "The second upgrade was more yellow, while the third one was pink.", font=controller.title_font)
+        label.config(font=("Helvetica", 21))
         label.pack(side="top", fill="x", pady=10)
         label = tk.Label(self, text="All of these will affect how the HomeBot makes its choices. Red for resilience, yellow for compassion, and pink for humor.", font=controller.title_font)
+        label.config(font=("Helvetica", 21))
         label.pack(side="top", fill="x", pady=10)
         label = tk.Label(self, text="Which upgrade will Verenia add that will affect how the HomeBot thinks?", font=controller.title_font)
+        label.config(font=("Helvetica", 21))
         label.pack(side="top", fill="x", pady=10)
         button = tk.Button(self, text="Red (Resilience)",command=lambda: controller.show_frame("U1" ))
         button2 = tk.Button(self, text="Yellow (Compassion)",command=lambda: controller.show_frame("U2"))
@@ -132,6 +140,17 @@ class Prolog(tk.Frame):
         button.pack()
         button2.pack()
         button3.pack()
+
+
+
+        button.config( height = 1, width = 13, pady = 15, padx = 30)
+        button2.config( height = 1, width = 13, pady = 15, padx = 30)
+        button3.config( height = 1, width = 13, pady = 15, padx = 30)
+
+
+        button.place(x=650, y=550)
+        button2.place(x=650, y=590)
+        button3.place(x=650, y=630)
 
 class prologuetext(tk.Frame):
 
@@ -157,14 +176,18 @@ class U1(tk.Frame):
         self.controller = controller
         label = tk.Label(self, text="After searching through each upgrade carefully, she selected her final choice.\n"
         "She picked up her tools again, moving the wires within the skull so she could inject the drive carefully.", font=controller.title_font)
+        label.config(font=("Helvetica", 21))
         label.pack(side="top", fill="x", pady=10)
         label = tk.Label(self, text="And by hearing the soft click, she knew the upgrade had been added", font=controller.title_font)
+        label.config(font=("Helvetica", 21))
         label.pack(side="top", fill="x", pady=10)
         label = tk.Label(self, text="Pushing some supplies away and enabling the upgrade through her old laptop, \n"
         "she moved to the ON switch in the corner of the room, her eyes wide with excitement.", font=controller.title_font)
+        label.config(font=("Helvetica", 21))
         label.pack(side="top", fill="x", pady=10)
         label = tk.Label(self, text="Though, the moment she pulled the ON switch, a loud ringing bursted through her ears. \n"
         "Immense heat engulfed her before her senses vanished… following with her consciousness, as well.", font=controller.title_font)
+        label.config(font=("Helvetica", 21))
         label.pack(side="top", fill="x", pady=10)
         button = tk.Button(self, text="continue",command=lambda: self.show())
         button.pack()
@@ -183,14 +206,18 @@ class U2(tk.Frame):
         self.controller = controller
         label = tk.Label(self, text="After searching through each upgrade carefully, she selected her final choice.\n"
         "She picked up her tools again, moving the wires within the skull so she could inject the drive carefully.", font=controller.title_font)
+        label.config(font=("Helvetica", 21))
         label.pack(side="top", fill="x", pady=10)
         label = tk.Label(self, text="And by hearing the soft click, she knew the upgrade had been added", font=controller.title_font)
+        label.config(font=("Helvetica", 21))
         label.pack(side="top", fill="x", pady=10)
         label = tk.Label(self, text="Pushing some supplies away and enabling the upgrade through her old laptop, \n"
         "she moved to the ON switch in the corner of the room, her eyes wide with excitement.", font=controller.title_font)
+        label.config(font=("Helvetica", 21))
         label.pack(side="top", fill="x", pady=10)
         label = tk.Label(self, text="Though, the moment she pulled the ON switch, a loud ringing bursted through her ears. \n"
         "Immense heat engulfed her before her senses vanished… following with her consciousness, as well.", font=controller.title_font)
+        label.config(font=("Helvetica", 21))
         label.pack(side="top", fill="x", pady=10)
         button = tk.Button(self, text="continue",command=lambda: self.show())
         button.pack()
@@ -208,14 +235,18 @@ class U3(tk.Frame):
         self.controller = controller
         label = tk.Label(self, text="After searching through each upgrade carefully, she selected her final choice.\n"
         "She picked up her tools again, moving the wires within the skull so she could inject the drive carefully.", font=controller.title_font)
+        label.config(font=("Helvetica", 21))
         label.pack(side="top", fill="x", pady=10)
         label = tk.Label(self, text="And by hearing the soft click, she knew the upgrade had been added", font=controller.title_font)
+        label.config(font=("Helvetica", 21))
         label.pack(side="top", fill="x", pady=10)
         label = tk.Label(self, text="Pushing some supplies away and enabling the upgrade through her old laptop, \n"
         "she moved to the ON switch in the corner of the room, her eyes wide with excitement.", font=controller.title_font)
+        label.config(font=("Helvetica", 21))
         label.pack(side="top", fill="x", pady=10)
         label = tk.Label(self, text="Though, the moment she pulled the ON switch, a loud ringing bursted through her ears. \n"
         "Immense heat engulfed her before her senses vanished… following with her consciousness, as well.", font=controller.title_font)
+        label.config(font=("Helvetica", 21))
         label.pack(side="top", fill="x", pady=10)
         button = tk.Button(self, text="continue",command=lambda: self.show())
         button.pack()
