@@ -323,7 +323,8 @@ class fight(tk.Frame):
     health = 100
     health_label = None
     Ahealth_lable = None
-
+    Gaurds_lable = None
+    Team_lable = None
 
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
@@ -335,6 +336,7 @@ class fight(tk.Frame):
         self.health_label = tk.Label(self, text="health: 100", font=controller.title_font)
         self.health_label.pack(side="top", fill="x", pady=10)
 
+
         self.Ahealth_label = tk.Label(self, text="health: 200", font=controller.title_font)
         self.Ahealth_label.pack(side="top", fill="x", pady=10)
 
@@ -344,6 +346,12 @@ class fight(tk.Frame):
         button2.pack()
         button3 = tk.Button(self, text="heal", command=lambda: self.randomgen(3))
         button3.pack()
+
+        self.Gaurds_lable = tk.Label(self, text="", font= self.controller.title_font)
+        self.Gaurds_lable.pack(side="top", fill="x", pady=10)
+        self.Team_lable = tk.Label(self, text="", font= self.controller.title_font)
+        self.Team_lable.pack(side="top", fill="x", pady=10
+
 
     def gun(self, stuff):
         if stuff == True:
@@ -377,18 +385,28 @@ class fight(tk.Frame):
         else:
             if action == 1:
                 self.gun(False)
+                self.Team_lable = config(self, text="you shoot the gaurds and they lose health", font=self.controller.title_font)
+                self.Team_lable.pack(side="top", fill="x", pady=10)
             elif action == 2:
                 self.punch(False)
+                self.Team_lable = config(self, text="you shit the gaurds and they lose health", font=self.controller.title_font)
+                self.Team_lable.pack(side="top", fill="x", pady=10)
             elif action == 3:
                 self.heal(False)
+                self.Team_lable = config(self, text="you heal your team", font=self.controller.title_font)
+                self.Team_lable.pack(side="top", fill="x", pady=10)
             num = randint(1, 3)
             if num == 1 :
                 self.gun(True)
-            elif num == 2:
+                self.Gaurds_lable = config(self, text="the gaurds shoot you and you lose health", font=self.controller.title_font)
+                self.Gaurds_lable.pack(side="top", fill="x", pady=10)
                 self.punch(True)
+                self.Gaurds_lable = config(self, text="the gaurds hit you and you lose health", font=self.controller.title_font)
+                self.Gaurds_lable.pack(side="top", fill="x", pady=10)
             elif num == 3:
                 self.heal(True)
-
+                self.Gaurds_lable = config(self, text="the gaurds heal themselvs", font=self.controller.title_font)
+                self.Gaurds_lable.pack(side="top", fill="x", pady=10)
 class end(tk.Frame):
 
     def __init__(self, parent, controller):
