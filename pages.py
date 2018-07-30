@@ -139,6 +139,17 @@ class Prolog(tk.Frame):
         button2.pack()
         button3.pack()
 
+
+
+        button.config( height = 1, width = 13, pady = 15, padx = 30)
+        button2.config( height = 1, width = 13, pady = 15, padx = 30)
+        button3.config( height = 1, width = 13, pady = 15, padx = 30)
+
+
+        button.place(x=650, y=550)
+        button2.place(x=650, y=590)
+        button3.place(x=650, y=630)
+
 class prologuetext(tk.Frame):
 
     def __init__(self, parent, controller):
