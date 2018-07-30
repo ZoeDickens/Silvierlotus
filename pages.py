@@ -64,11 +64,9 @@ class StartPage(tk.Frame):
         background_label = tk.Label(self, image=background_image)
         background_label.image = background_image
         background_label.place(x=0, y=0, relwidth=1, relheight=1)
-        label = tk.Label(self, text="Welcome to the order of the Silver Lotus ", font=controller.title_font)
-        label.pack(side="top", fill="x", pady=10)
         label = tk.Label(self, text="Order of the Silver Lotus", font=controller.title_font)
 
-        label.pack(side="top", fill="x", pady=10)
+        label.pack(side="top", fill="x", pady = 10)
 
         button1 = tk.Button(self, text="Play",
                             command=lambda: self.show())
@@ -76,14 +74,16 @@ class StartPage(tk.Frame):
                             command=lambda: controller.show_frame("Exit"))
         button3 = tk.Button(self, text="Settings",
                             command=lambda: controller.show_frame("Settings"))
+
         button1.place(x=650, y=550)
-        button2.place(x=650, y=630)
-        button3.place(x= 650, y= 720)
+        button2.place(x=650, y=590)
+        button3.place(x=650, y=630)
 
 
-        button1.config( height = 1, width = 15, pady = 30)
-        button2.config( height = 1, width = 9, pady = 30)
-        button3.config( height = 1, width = 8, pady = 30)
+        button1.config( height = 1, width = 13, pady = 15, padx = 25)
+        button2.config( height = 1, width = 13, pady = 15, padx = 25)
+        button3.config( height = 1, width = 13, pady = 15, padx = 25)
+        button1.config(bg= "#e8e8e8")
 
 
     def show(self):
