@@ -340,15 +340,14 @@ class bar(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         self.controller = controller
-<<<<<<< HEAD
+
         background_image=tk.PhotoImage(file = "city.gif")
         background_label = tk.Label(self, image=background_image)
         background_label.image = background_image
         background_label.place(x=0, y=0, relwidth=1, relheight=1)
         label = tk.Label(self, text="bar scene", font=controller.title_font)
-=======
+
         label = tk.Label(self, text="Mission one", font=controller.title_font)
->>>>>>> a9b8184f083e5252d93e1dd6952335395f72ef70
         label.pack(side="top", fill="x", pady=10)
 class bar(tk.Frame):
     def __init__(self, parent, controller):
@@ -452,15 +451,17 @@ class fight(tk.Frame):
                 self.heal(False)
                 self.Team_lable.config(text="you heal your team",)
 
-                num = randint(1, 3)
+            num = randint(1, 3)
             if num == 1 :
-                num = randint(1, 3)
+
                 self.gun(True)
                 self.Gaurds_lable.config(text="the gaurds shoot you and you lose health",)
             elif num == 2:
+
                 self.punch(True)
                 self.Gaurds_lable.config( text="the gaurds hit you and you lose health")
             elif num == 3:
+            
                 self.heal(True)
                 self.Gaurds_lable.config(self, text="the gaurds heal themselvs", font=self.controller.title_font)
                 self.Gaurds_lable.pack(side="top", fill="x", pady=10)
