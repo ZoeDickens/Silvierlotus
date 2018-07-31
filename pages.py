@@ -464,7 +464,7 @@ class bar(tk.Frame):
 
         tk.Frame.__init__(self, parent)
 
-        tk.Frame.__init__(self, parent
+        tk.Frame.__init__(self, parent)
 
         label = tk.Label(self, text="The duo leaves the bar and enters the rain pouring upon the streets, only to be greeted by a woman with a prosthetic arm.",font=controller.title_font)
         label.config(font=("Helvetica", 21))
