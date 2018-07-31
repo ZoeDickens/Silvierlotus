@@ -318,7 +318,11 @@ class bar(tk.Frame):
         self.controller = controller
         label = tk.Label(self, text="Sillatine, 2E 315 The Winking Bot Bar", font=controller.title_font)
         label.pack(side="top", fill="x", pady=10)
-        label = tk.Label(self, text="The duo leaves the bar and enters the rain pouring upon the streets, only to be greeted by a woman with a prosthetic arm. She wore goggles upon her head, eyes wide in terror.", font=controller.title_font)
+        label = tk.Label(self, text="The duo leaves the bar and enters the rain pouring upon the streets, only to be greeted by a woman with a prosthetic arm.", font=controller.title_font)
+        label.config(font=("Helvetica", 21))
+        label.pack(side="top", fill="x", pady=10)
+        label = tk.Label(self, text="She wore goggles upon her head, eyes wide in terror.", font=controller.title_font)
+        label.config(font=("Helvetica", 21))
         label.pack(side="top", fill="x", pady=10)
 
         button1 = tk.Button(self, text="",
