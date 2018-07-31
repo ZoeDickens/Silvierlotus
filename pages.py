@@ -323,6 +323,8 @@ class bar(tk.Frame):
         label.pack(side="top", fill="x", pady=10)
         label = tk.Label(self, text="She wore goggles upon her head, eyes wide in terror.", font=controller.title_font)
         label.config(font=("Helvetica", 21))
+        label = tk.Label(self, text="“Help- you gotta help me!” she called, hands raised in front of her as if she was forming a shield for herself. \n"
+        "Ariella turned to the woman, her brows arching. 'With what-'")
         label.pack(side="top", fill="x", pady=10)
         button = tk.Button(self, text="continue",command=lambda: self.show())
         button1 = tk.Button(self, text="Attack",command=lambda: controller.show_frame("fight"))
