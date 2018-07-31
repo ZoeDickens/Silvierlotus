@@ -156,7 +156,6 @@ class upgradesc(tk.Frame):
         label.pack(side="top", fill="x", pady=1)
         label = tk.Label(self, text="Which upgrade will Verenia add that will affect how the HomeBot thinks?", font=controller.title_font)
         label.config(font=("Helvetica", 21))
-<<<<<<< HEAD
         label.pack(side="top", fill="x", pady=10)
 
 
@@ -171,9 +170,9 @@ class Prolog(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         self.controller = controller
-=======
+
         label.pack(side="top", fill="x", pady=1)
->>>>>>> e38ceacc4262fc90bf1f55017530177faf4efcb1
+
         button = tk.Button(self, text="Red (Resilience)",command=lambda: controller.show_frame("U1" ))
         button2 = tk.Button(self, text="Yellow (Compassion)",command=lambda: controller.show_frame("U2"))
         button3 = tk.Button(self, text="Pink (Humor)",command=lambda: controller.show_frame("U3"))
@@ -443,47 +442,44 @@ class bar(tk.Frame):
         label = tk.Label(self, text="bar scene", font=controller.title_font)
         label.pack(side="top", fill="x", pady=10)
         label = tk.Label(self, text="Mission one", font=controller.title_font)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        label.pack(side="top", fill="x", pady=1)
-=======
 
->>>>>>> e38ceacc4262fc90bf1f55017530177faf4efcb1
+        label.pack(side="top", fill="x", pady=1)
+
+
+
         label.pack(side="top", fill="x", pady=10)
->>>>>>> 1208153de3826b408d8c29c8cbd8294641955f69
+
 class bar(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         self.controller = controller
         label = tk.Label(self, text="Sillatine, 2E 315 The Winking Bot Bar", font=controller.title_font)
-<<<<<<< HEAD
+
         label.pack(side="top", fill="x", pady=1)
-=======
+
         label.pack(side="top", fill="x", pady=10)
 
 class bar(tk.Frame):
     def __init__(self, parent, controller):
-<<<<<<< HEAD
+
         tk.Frame.__init__(self, parent)
-=======
+
         tk.Frame.__init__(self, parent
->>>>>>> 1208153de3826b408d8c29c8cbd8294641955f69
->>>>>>> e38ceacc4262fc90bf1f55017530177faf4efcb1
-        label = tk.Label(self, text="The duo leaves the bar and enters the rain pouring upon the streets, only to be greeted by a woman with a prosthetic arm.", font=controller.title_font)
+
+        label = tk.Label(self, text="The duo leaves the bar and enters the rain pouring upon the streets, only to be greeted by a woman with a prosthetic arm.",font=controller.title_font)
         label.config(font=("Helvetica", 21))
         label.pack(side="top", fill="x", pady=1)
         label = tk.Label(self, text="She wore goggles upon her head, eyes wide in terror.", font=controller.title_font)
         label.config(font=("Helvetica", 21))
         label = tk.Label(self, text="“Help- you gotta help me!” she called, hands raised in front of her as if she was forming a shield for herself. \n"
         "Ariella turned to the woman, her brows arching. 'With what-'")
-<<<<<<< HEAD
+
         label.pack(side="top", fill="x", pady=10)
         label = tk.Label(self, text="She paused once she noticed two men donned in black approaching them from the front. Her veins froze in terror.")
         label.pack(side="top", fill="x", pady=10)
-=======
+
         label.pack(side="top", fill="x", pady=1)
->>>>>>> e38ceacc4262fc90bf1f55017530177faf4efcb1
+
         button = tk.Button(self, text="continue",command=lambda: self.show())
         button1 = tk.Button(self, text="Attack",command=lambda: controller.show_frame("fight"))
 
