@@ -103,8 +103,13 @@ class Prolog(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         self.controller = controller
-        # T.insert(END, "Just a text Widget\nin two lines\n")
-        # mainloop()
+
+        background_image=tk.PhotoImage(file = "lab3.gif")
+        background_label = tk.Label(self, image=background_image)
+        background_label.image = background_image
+        background_label.place(x=0, y=0, relwidth=1, relheight=1)
+
+
         label = tk.Label(self, text="Midday’s light could be seen slipping through the humongous, glass windows on the left, yet Verenia couldn’t care less about the beauty of Sillatine.", font=controller.title_font)
         label.config(font=("Helvetica", 21))
         label.pack(side="top", fill="x", pady=10)
@@ -157,6 +162,11 @@ class prologuetext(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         self.controller = controller
+        self.controller = controller
+        background_image=tk.PhotoImage(file = "lab3.gif")
+        background_label = tk.Label(self, image=background_image)
+        background_label.image = background_image
+        background_label.place(x=0, y=0, relwidth=1, relheight=1)
         label = tk.Label(self, text="Prologue Begins", font=controller.title_font)
         label.pack(side="top", fill="x", pady=10)
         label = tk.Label(self, text="Sillatine, 2E 314", font=controller.title_font)
@@ -174,6 +184,10 @@ class U1(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         self.controller = controller
+        background_image=tk.PhotoImage(file = "lab3.gif")
+        background_label = tk.Label(self, image=background_image)
+        background_label.image = background_image
+        background_label.place(x=0, y=0, relwidth=1, relheight=1)
         label = tk.Label(self, text="After searching through each upgrade carefully, she selected her final choice.\n"
         "She picked up her tools again, moving the wires within the skull so she could inject the drive carefully.", font=controller.title_font)
         label.config(font=("Helvetica", 21))
@@ -204,6 +218,10 @@ class U2(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         self.controller = controller
+        background_image=tk.PhotoImage(file = "lab3.gif")
+        background_label = tk.Label(self, image=background_image)
+        background_label.image = background_image
+        background_label.place(x=0, y=0, relwidth=1, relheight=1)
         label = tk.Label(self, text="After searching through each upgrade carefully, she selected her final choice.\n"
         "She picked up her tools again, moving the wires within the skull so she could inject the drive carefully.", font=controller.title_font)
         label.config(font=("Helvetica", 21))
@@ -233,6 +251,10 @@ class U3(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         self.controller = controller
+        background_image=tk.PhotoImage(file = "lab3.gif")
+        background_label = tk.Label(self, image=background_image)
+        background_label.image = background_image
+        background_label.place(x=0, y=0, relwidth=1, relheight=1)
         label = tk.Label(self, text="After searching through each upgrade carefully, she selected her final choice.\n"
         "She picked up her tools again, moving the wires within the skull so she could inject the drive carefully.", font=controller.title_font)
         label.config(font=("Helvetica", 21))
@@ -263,7 +285,6 @@ class HOP(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         self.controller = controller
-
         label = tk.Label(self, text="“Doctor Rylan.”", font=controller.title_font)
         label.pack(side="top", fill="x", pady=10)
 
@@ -272,6 +293,10 @@ class HOP2(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         self.controller = controller
+        background_image=tk.PhotoImage(file = "doctor.gif")
+        background_label = tk.Label(self, image=background_image)
+        background_label.image = background_image
+        background_label.place(x=0, y=0, relwidth=1, relheight=1)
         label = tk.Label(self, text="“Yes?”", font=controller.title_font)
         label.pack(side="top", fill="x", pady=10)
 
@@ -280,6 +305,7 @@ class HOP3(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         self.controller = controller
+        background_color= "black"
         label = tk.Label(self, text="“Take this. The Silver Lotus needs her back.”", font=controller.title_font)
         label.pack(side="top", fill="x", pady=10)
 
@@ -288,6 +314,10 @@ class HOP4(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         self.controller = controller
+        background_image=tk.PhotoImage(file = "doctor.gif")
+        background_label = tk.Label(self, image=background_image)
+        background_label.image = background_image
+        background_label.place(x=0, y=0, relwidth=1, relheight=1)
         label = tk.Label(self, text="......of course..I...I'll do it", font=controller.title_font)
         label.pack(side="top", fill="x", pady=10)
         lable = tk.Label(self, text="...", font=controller.title_font)
@@ -310,6 +340,10 @@ class bar(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         self.controller = controller
+        background_image=tk.PhotoImage(file = "city.gif")
+        background_label = tk.Label(self, image=background_image)
+        background_label.image = background_image
+        background_label.place(x=0, y=0, relwidth=1, relheight=1)
         label = tk.Label(self, text="bar scene", font=controller.title_font)
         label.pack(side="top", fill="x", pady=10)
 
@@ -328,9 +362,15 @@ class fight(tk.Frame):
     Gaurds_lable = None
     Team_lable = None
 
+
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         self.controller = controller
+        background_image=tk.PhotoImage(file = "city.gif")
+        background_label = tk.Label(self, image=background_image)
+        background_label.image = background_image
+        background_label.place(x=0, y=0, relwidth=1, relheight=1)
+
         label = tk.Label(self, text="fight scene", font=controller.title_font)
         label.pack(side="top", fill="x", pady=10)
         label = tk.Label(self, text="", font=controller.title_font)
@@ -394,7 +434,7 @@ class fight(tk.Frame):
             elif action == 3:
                 self.heal(False)
                 self.Team_lable.config(text="you heal your team",)
-                
+
                 num = randint(1, 3)
             if num == 1 :
                 num = randint(1, 3)
