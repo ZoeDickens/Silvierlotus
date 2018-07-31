@@ -340,15 +340,14 @@ class bar(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         self.controller = controller
-<<<<<<< HEAD
+
         background_image=tk.PhotoImage(file = "city.gif")
         background_label = tk.Label(self, image=background_image)
         background_label.image = background_image
         background_label.place(x=0, y=0, relwidth=1, relheight=1)
         label = tk.Label(self, text="bar scene", font=controller.title_font)
-=======
         label = tk.Label(self, text="Mission one", font=controller.title_font)
->>>>>>> a9b8184f083e5252d93e1dd6952335395f72ef70
+
         label.pack(side="top", fill="x", pady=10)
 class bar(tk.Frame):
     def __init__(self, parent, controller):
@@ -356,6 +355,10 @@ class bar(tk.Frame):
         self.controller = controller
         label = tk.Label(self, text="Sillatine, 2E 315 The Winking Bot Bar", font=controller.title_font)
         label.pack(side="top", fill="x", pady=10)
+
+class bar(tk.Frame):
+    def __init__(self, parent, controller):
+        tk.Frame.__init__(self, parent
         label = tk.Label(self, text="The duo leaves the bar and enters the rain pouring upon the streets, only to be greeted by a woman with a prosthetic arm.", font=controller.title_font)
         label.config(font=("Helvetica", 21))
         label.pack(side="top", fill="x", pady=10)
