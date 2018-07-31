@@ -312,7 +312,10 @@ class bar(tk.Frame):
         self.controller = controller
         label = tk.Label(self, text="Mission one", font=controller.title_font)
         label.pack(side="top", fill="x", pady=10)
-class bar
+class bar(tk.Frame):
+    def __init__(self, parent, controller):
+        tk.Frame.__init__(self, parent)
+        self.controller = controller
         label = tk.Label(self, text="Sillatine, 2E 315 The Winking Bot Bar", font=controller.title_font)
         label.pack(side="top", fill="x", pady=10)
         label = tk.Label(self, text="The duo leaves the bar and enters the rain pouring upon the streets, only to be greeted by a woman with a prosthetic arm. She wore goggles upon her head, eyes wide in terror.", font=controller.title_font)
@@ -399,7 +402,7 @@ class fight(tk.Frame):
             elif action == 3:
                 self.heal(False)
                 self.Team_lable.config(text="you heal your team",)
-                
+
                 num = randint(1, 3)
             if num == 1 :
                 num = randint(1, 3)
