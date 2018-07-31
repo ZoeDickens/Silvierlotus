@@ -442,6 +442,11 @@ class exit(tk.Frame):
 class bar(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
+        self.controller = controller
+        background_image=tk.PhotoImage(file = "city.gif")
+        background_label = tk.Label(self, image=background_image)
+        background_label.image = background_image
+        background_label.place(x=0, y=0, relwidth=1, relheight=1)
         label = tk.Label(self, text="", font=controller.title_font)
         label.config(font=("Helvetica", 21))
         label.pack(side="top", fill="x", pady=1)
@@ -449,10 +454,9 @@ class bar(tk.Frame):
         label.config(font=("Helvetica", 21))
         label = tk.Label(self, text="“Help- you gotta help me!” she called, hands raised in front of her as if she was forming a shield for herself. \n"
         "Ariella turned to the woman, her brows arching. 'With what-'")
+        label.config(font=("Helvetica", 21))
         label.pack(side="top", fill="x", pady=1)
-        button = tk.Button(self, text="continue",command=lambda: self.show())
-        button1 = tk.Button(self, text="Attack",command=lambda: controller.show_frame("fight"))
-
+        button1 = tk.Button(self, text="continue",command=lambda: self.show())
         button1.pack()
         button1.place(x=650, y=550)
 
