@@ -139,6 +139,19 @@ class Prolog(tk.Frame):
         label = tk.Label(self, text="Which upgrade will Verenia add that will affect how the HomeBot thinks?", font=controller.title_font)
         label.config(font=("Helvetica", 21))
         label.pack(side="top", fill="x", pady=10)
+
+
+
+
+
+
+
+
+class Prolog(tk.Frame):
+
+    def __init__(self, parent, controller):
+        tk.Frame.__init__(self, parent)
+        self.controller = controller
         button = tk.Button(self, text="Red (Resilience)",command=lambda: controller.show_frame("U1" ))
         button2 = tk.Button(self, text="Yellow (Compassion)",command=lambda: controller.show_frame("U2"))
         button3 = tk.Button(self, text="Pink (Humor)",command=lambda: controller.show_frame("U3"))
@@ -346,8 +359,8 @@ class bar(tk.Frame):
         background_label.image = background_image
         background_label.place(x=0, y=0, relwidth=1, relheight=1)
         label = tk.Label(self, text="bar scene", font=controller.title_font)
+        label.pack(side="top", fill="x", pady=10)
         label = tk.Label(self, text="Mission one", font=controller.title_font)
-
         label.pack(side="top", fill="x", pady=10)
 class bar(tk.Frame):
     def __init__(self, parent, controller):
@@ -358,7 +371,7 @@ class bar(tk.Frame):
 
 class bar(tk.Frame):
     def __init__(self, parent, controller):
-        tk.Frame.__init__(self, parent
+        tk.Frame.__init__(self, parent)
         label = tk.Label(self, text="The duo leaves the bar and enters the rain pouring upon the streets, only to be greeted by a woman with a prosthetic arm.", font=controller.title_font)
         label.config(font=("Helvetica", 21))
         label.pack(side="top", fill="x", pady=10)
@@ -366,6 +379,8 @@ class bar(tk.Frame):
         label.config(font=("Helvetica", 21))
         label = tk.Label(self, text="“Help- you gotta help me!” she called, hands raised in front of her as if she was forming a shield for herself. \n"
         "Ariella turned to the woman, her brows arching. 'With what-'")
+        label.pack(side="top", fill="x", pady=10)
+        label = tk.Label(self, text="She paused once she noticed two men donned in black approaching them from the front. Her veins froze in terror.")
         label.pack(side="top", fill="x", pady=10)
         button = tk.Button(self, text="continue",command=lambda: self.show())
         button1 = tk.Button(self, text="Attack",command=lambda: controller.show_frame("fight"))
@@ -467,7 +482,7 @@ class fight(tk.Frame):
             elif num == 3:
 
                 self.heal(True)
-                self.Gaurds_lable.config(self, text="the gaurds heal themselvs", font=self.controller.title_font)
+                self.Gaurds_lable.config(self, text="The gaurds heal themselvs", font=self.controller.title_font)
                 self.Gaurds_lable.pack(side="top", fill="x", pady=10)
 
 class end(tk.Frame):
