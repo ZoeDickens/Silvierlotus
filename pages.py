@@ -131,10 +131,8 @@ class thanks(tk.Frame):
         "his hands held tight behind his back in a strict manner.", font=controller.title_font)
         label.config(font=("Helvetica", 21))
         label.pack(side="top", fill="x", pady=10)
-
         button1 = tk.Button(self, text="back to work",
-                            command=lambda: controller.show_frame("upgradesc"))
-
+        command=lambda: controller.show_frame("upgradesc"))
         button1.pack()
 
 class upgradesc(tk.Frame):
@@ -178,8 +176,7 @@ class ignore(tk.Frame):
         label.config(font=("Helvetica", 21))
         label.pack(side="top", fill="x", pady=10)
         button1 = tk.Button(self, text="bakc to work",
-                            command=lambda: controller.show_frame("upgradesc"))
-
+        command=lambda: controller.show_frame("upgradesc"))
         button1.pack()
 
 
@@ -317,6 +314,7 @@ class U2(tk.Frame):
         label.pack(side="top", fill="x", pady=1)
         button = tk.Button(self, text="continue",command=lambda: self.show())
         button.pack()
+
     def show(self):
     #self.controller = controller
         self.controller.show_frame("HOP")
@@ -400,9 +398,9 @@ class HOP4(tk.Frame):
         label.pack(side="top", fill="x", pady=1)
         lable = tk.Label(self, text="...", font=controller.title_font)
         lable = tk.Label(self, text="Prologue Ends", font=controller.title_font)
-        button = tk.Button(self, text="continue",command=lambda:controller.show_frame("bar"))
-        button.pack()
-        button.place(x=650, y=550)
+        button1 = tk.Button(self, text="continue",
+        command=lambda: controller.show_frame("bar"))
+        button1.pack()
 
 class exit(tk.Frame):
 
@@ -413,38 +411,37 @@ class exit(tk.Frame):
 
 
 #combat stuff
-class bar(tk.Frame):
+# class bar(tk.Frame):
+#
+#     def __init__(self, parent, controller):
+#         tk.Frame.__init__(self, parent)
+#         self.controller = controller
+#
+#         background_image=tk.PhotoImage(file = "city.gif")
+#         background_label = tk.Label(self, image=background_image)
+#         background_label.image = background_image
+#         background_label.place(x=0, y=0, relwidth=1, relheight=1)
+#         label = tk.Label(self, text="bar scene", font=controller.title_font)
+#         label = tk.Label(self, text="Mission one", font=controller.title_font)
+#
+#         label.pack(side="top", fill="x", pady=1)
+#
+#
+#         label.pack(side="top", fill="x", pady=10)
 
+# class bar(tk.Frame):
+#     def __init__(self, parent, controller):
+#         tk.Frame.__init__(self, parent)
+#         self.controller = controller
+#         label = tk.Label(self, text="Sillatine, 2E 315 The Winking Bot Bar", font=controller.title_font)
+#
+#         label.pack(side="top", fill="x", pady=1)
+#
+#         label.pack(side="top", fill="x", pady=10)
+
+class bar(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
-        self.controller = controller
-
-        background_image=tk.PhotoImage(file = "city.gif")
-        background_label = tk.Label(self, image=background_image)
-        background_label.image = background_image
-        background_label.place(x=0, y=0, relwidth=1, relheight=1)
-        label = tk.Label(self, text="bar scene", font=controller.title_font)
-        label = tk.Label(self, text="Mission one", font=controller.title_font)
-<<<<<<< HEAD
-        label.pack(side="top", fill="x", pady=1)
-=======
-
-        label.pack(side="top", fill="x", pady=10)
->>>>>>> 1208153de3826b408d8c29c8cbd8294641955f69
-class bar(tk.Frame):
-    def __init__(self, parent, controller):
-        tk.Frame.__init__(self, parent)
-        self.controller = controller
-        label = tk.Label(self, text="Sillatine, 2E 315 The Winking Bot Bar", font=controller.title_font)
-<<<<<<< HEAD
-        label.pack(side="top", fill="x", pady=1)
-=======
-        label.pack(side="top", fill="x", pady=10)
-
-class bar(tk.Frame):
-    def __init__(self, parent, controller):
-        tk.Frame.__init__(self, parent
->>>>>>> 1208153de3826b408d8c29c8cbd8294641955f69
         label = tk.Label(self, text="The duo leaves the bar and enters the rain pouring upon the streets, only to be greeted by a woman with a prosthetic arm.", font=controller.title_font)
         label.config(font=("Helvetica", 21))
         label.pack(side="top", fill="x", pady=1)
