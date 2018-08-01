@@ -28,7 +28,7 @@ class SampleApp(tk.Tk):
         container.grid_columnconfigure(0, weight=1)
 
         self.frames = {}
-        for F in (StartPage, Prolog, exit, U1, U2, U3, prologuetext, HOP, HOP2, HOP3, HOP4, bar, fight, end, percy, thanks, ignore, upgradesc):
+        for F in (StartPage, Prolog, exit, U1, U2, U3, prologuetext, HOP, HOP2, HOP3, HOP4, bar, fight, end, percy, thanks, ignore, upgradesc, run):
             page_name = F.__name__
             frame = F(parent=container, controller=self)
             self.frames[page_name] = frame
@@ -442,19 +442,52 @@ class exit(tk.Frame):
 class bar(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
-        label = tk.Label(self, text="", font=controller.title_font)
+        background_image=tk.PhotoImage(file = "city2.gif")
+        background_label = tk.Label(self, image=background_image)
+        background_label.image = background_image
+        background_label.place(x=0, y=0, relwidth=1, relheight=1)
+        label = tk.Label(self, text="Verenia sat at a local bar thinking to herself. It had been a year since the accident at the lab and a lot had changed.\n"
+        "After finishing her last drink Verenia stood up and headed out of the bar. ‘Why had the robot exploded’ she wondered as she walked down the street.\n"
+         "‘There was no reason for it" , font=controller.title_font)
         label.config(font=("Helvetica", 21))
         label.pack(side="top", fill="x", pady=1)
-        label = tk.Label(self, text="She wore goggles upon her head, eyes wide in terror.", font=controller.title_font)
+        label = tk.Label(self, text="Verenia suddenly stopped ‘what the….’  Two soldiers stood outside a cafe their guns pointed at two women.", font=controller.title_font)
         label.config(font=("Helvetica", 21))
-        label = tk.Label(self, text="“Help- you gotta help me!” she called, hands raised in front of her as if she was forming a shield for herself. \n"
-        "Ariella turned to the woman, her brows arching. 'With what-'")
         label.pack(side="top", fill="x", pady=1)
-        button = tk.Button(self, text="continue",command=lambda: self.show())
-        button1 = tk.Button(self, text="Attack",command=lambda: controller.show_frame("fight"))
+        label = tk.Label(self, text="‘Where is she!’ one of the soldiers yelled. \n"
+        "‘Over there!’ the other soldier said pointing at Verenia\n", font=controller.title_font)
+        label.config(font=("Helvetica", 21))
+        label.pack(side="top", fill="x", pady=1)
+        label = tk.Label(self, text="‘Verenia run!’ one of the girls shouted pulling out her gun.", font=controller.title_font)
+        label.config(font=("Helvetica", 21))
+        label.pack(side="top", fill="x", pady=1)
+        label = tk.Label(self, text="What will Verenia do", font=controller.title_font)
+        label.config(font=("Helvetica", 21))
+        label.pack(side="top", fill="x", pady=1)
 
+        button = tk.Button(self, text="fight",
+        command=lambda: controller.show_frame("fight"))
+        button.pack()
+        button2 = tk.Button(self, text="run",
+        command=lambda: controller.show_frame("run"))
+        button2.pack()
+
+class run(tk.Frame):
+
+    def __init__(self, parent, controller):
+        tk.Frame.__init__(self, parent)
+        self.controller = controller
+        background_image=tk.PhotoImage(file = "city.gif")
+        background_label = tk.Label(self, image=background_image)
+        background_label.image = background_image
+        background_label.place(x=0, y=0, relwidth=1, relheight=1)
+        label = tk.Label(self, text="Verenia tries to run but the soldiers chase her. Verenia stops to face the soldiers and the two girls stand with her.", font=controller.title_font)
+        label.config(font=("Helvetica", 21))
+        label.pack(side="top", fill="x", pady=1)
+
+        button1 = tk.Button(self, text="fight",
+                            command=lambda: controller.show_frame("fight"))
         button1.pack()
-        button1.place(x=650, y=550)
 
 class fight(tk.Frame):
 
@@ -469,7 +502,7 @@ class fight(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         self.controller = controller
-        background_image=tk.PhotoImage(file = "city.gif")
+        background_image=tk.PhotoImage(file = "city3.gif")
         background_label = tk.Label(self, image=background_image)
         background_label.image = background_image
         background_label.place(x=0, y=0, relwidth=1, relheight=1)
@@ -558,8 +591,15 @@ class end(tk.Frame):
         def __init__(self, parent, controller):
             tk.Frame.__init__(self, parent)
             self.controller = controller
-            label = tk.Label(self, text="this is the end", font=controller.title_font)
-            label.pack(side="top", fill="x", pady=10)
+            label = tk.Label(self, text="Thank you for playing our game!\n"
+            "Creators Anna Taylor, Zoe dickens, Tianna Moore, Morgan Hooks,\n"
+            "Artist Tim Dickens Sophie Gajewski", font=controller.title_font)
+            label.config(font=("Helvetica", 21))
+            label.pack(side="top", fill="x", pady=1)
+            button1 = tk.Button(self, text="back to start",
+            command=lambda: controller.show_frame("StartPage"))
+            button1.pack()
+
 
 
 
