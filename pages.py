@@ -442,6 +442,7 @@ class exit(tk.Frame):
 class bar(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
+<<<<<<< HEAD
         background_image=tk.PhotoImage(file = "city2.gif")
         background_label = tk.Label(self, image=background_image)
         background_label.image = background_image
@@ -449,10 +450,19 @@ class bar(tk.Frame):
         label = tk.Label(self, text="Verenia sat at a local bar thinking to herself. It had been a year since the accident at the lab and a lot had changed.\n"
         "After finishing her last drink Verenia stood up and headed out of the bar. ‘Why had the robot exploded’ she wondered as she walked down the street.\n"
          "‘There was no reason for it" , font=controller.title_font)
+=======
+        self.controller = controller
+        background_image=tk.PhotoImage(file = "city.gif")
+        background_label = tk.Label(self, image=background_image)
+        background_label.image = background_image
+        background_label.place(x=0, y=0, relwidth=1, relheight=1)
+        label = tk.Label(self, text="", font=controller.title_font)
+>>>>>>> 27a3ea83101476f77894db5b67fa2cddb9b5eb9a
         label.config(font=("Helvetica", 21))
         label.pack(side="top", fill="x", pady=1)
         label = tk.Label(self, text="Verenia suddenly stopped ‘what the….’  Two soldiers stood outside a cafe their guns pointed at two women.", font=controller.title_font)
         label.config(font=("Helvetica", 21))
+<<<<<<< HEAD
         label.pack(side="top", fill="x", pady=1)
         label = tk.Label(self, text="‘Where is she!’ one of the soldiers yelled. \n"
         "‘Over there!’ the other soldier said pointing at Verenia\n", font=controller.title_font)
@@ -487,6 +497,13 @@ class run(tk.Frame):
 
         button1 = tk.Button(self, text="fight",
                             command=lambda: controller.show_frame("fight"))
+=======
+        label = tk.Label(self, text="“Help- you gotta help me!” she called, hands raised in front of her as if she was forming a shield for herself. \n"
+        "Ariella turned to the woman, her brows arching. 'With what-'")
+        label.config(font=("Helvetica", 21))
+        label.pack(side="top", fill="x", pady=1)
+        button1 = tk.Button(self, text="continue",command=lambda: self.show())
+>>>>>>> 27a3ea83101476f77894db5b67fa2cddb9b5eb9a
         button1.pack()
 
 class fight(tk.Frame):
